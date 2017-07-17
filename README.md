@@ -5,6 +5,15 @@ This project is an addin for [Markdown Monster](https://markdownmonster.west-win
 When installed, a book icon is located in Markdown Monster's toolbar.
 When you click the button, the addin generates (or regenerates) a TOC.
 
+The addin reads each line of your markdown file, looking for headings. It then generates the TOC based on the depth of each heading.
+
+The addin places the TOC between 'hidden' tags, like so:
+[//]: # (TOC Begin)
+TOC is placed here.
+[//]: # (TOC End)
+
+By placing the TOC between the tags, it is able to regenerate, without the user manually replacing the TOC.
+
 When first generating a TOC, the TOC is placed at the cursors current line.
 
 > **NOTE:** Previous headings, which reside before the TOC, are ignored.
