@@ -19,4 +19,5 @@ is not.
 
 To change the maximum depth, set the MaxDepth setting in the addin's configuration file.
 
+> **TIP:** If the TOC links are not scrolling for you, remove the *base* element from the *head* element of the page. 
 
