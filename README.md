@@ -7,12 +7,12 @@ When you click the button, the addin generates (or regenerates) a TOC.
 
 The addin reads each line of your markdown file, looking for headings. It then generates the TOC based on the depth of each heading.
 
-The addin places the TOC between 'hidden' tags, like so:
+The addin places the TOC between 'hidden' markers, like so:
 [//]: # (TOC Begin)
 TOC is placed here.
 [//]: # (TOC End)
 
-By placing the TOC between the tags, it is able to regenerate, without the user manually replacing the TOC.
+By placing the TOC between the markers, it is able to regenerate, without the user manually replacing the TOC.
 
 When first generating a TOC, the TOC is placed at the cursors current line.
 
