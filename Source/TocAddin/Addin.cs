@@ -170,7 +170,16 @@ namespace TocAddin
 						}
 
 						/* The depth is calculated relative the the first depth encountered. */
-						int depth = i - firstDepth;				
+						int depth = i - firstDepth;
+
+						if (depth < 0)
+						{
+							MessageBox.Show($"Invalid heading hierarchy detected at \"{text}\". "
+											+ "Headings must have equal or greater depth "
+											+ "than the first heading that comes after the TOC.", AddinTitle,
+								MessageBoxButton.OK, MessageBoxImage.Warning);
+							return;
+						}
 
 						headings.Add(new Heading(depth, text, anchorId));
 					}
@@ -188,8 +197,6 @@ namespace TocAddin
 
 			/* Create the TOC */
 			StringBuilder sb = new StringBuilder();
-
-			bool first = true;
 
 			sb.AppendLine(tocBeginIndicator);
 			foreach (Heading heading in headings)
@@ -231,6 +238,7 @@ namespace TocAddin
 					SetMarkdown(newMarkdown);
 				}
 			}
+
 		}
 
 		//		public override void OnExecuteConfiguration(object sender)
