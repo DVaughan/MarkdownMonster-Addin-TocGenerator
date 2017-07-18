@@ -118,7 +118,7 @@ namespace TocAddin
 			bool hasEndIndicator = false;
 
 			int lineIndex = 0;
-
+			
 			foreach (var line in lines)
 			{
 				if (line.Contains(tocBeginIndicator))
@@ -137,6 +137,7 @@ namespace TocAddin
 
 			bool replaceToc = hasBeginIndicator && hasEndIndicator && beginTocLineIndex <= endTocLineIndex;
 
+			int firstDepth = -1;
 			lineIndex = -1;
 
 			/* Locate headings */
@@ -162,7 +163,16 @@ namespace TocAddin
 					{
 						string text = trimmed.Substring(i + 2);
 						string anchorId = "#" + text.Replace(" ", "-").ToLower();
-						headings.Add(new Heading(i, text, anchorId));
+
+						if (firstDepth == -1)
+						{
+							firstDepth = i;
+						}
+
+						/* The depth is calculated relative the the first depth encountered. */
+						int depth = i - firstDepth;				
+
+						headings.Add(new Heading(depth, text, anchorId));
 					}
 				}
 			}
@@ -179,11 +189,12 @@ namespace TocAddin
 			/* Create the TOC */
 			StringBuilder sb = new StringBuilder();
 
+			bool first = true;
+
 			sb.AppendLine(tocBeginIndicator);
 			foreach (Heading heading in headings)
-			{
-				int depth = heading.Depth;
-				string tabs = tabArray[depth];
+			{		
+				string tabs = tabArray[heading.Depth];
 				sb.AppendLine($"{tabs}* [{heading.Text}]({heading.Href})");
 			}
 
