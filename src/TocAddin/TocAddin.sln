@@ -1,9 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.15
+VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TocAddin", "TocAddin.csproj", "{A2802286-A34D-45A2-94F8-53746D758BFD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Publishing", "Publishing", "{6F2DE82F-1173-4ABE-90CC-8F6BCE54375B}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\Publishing\CreateDistribution.ps1 = ..\..\Publishing\CreateDistribution.ps1
+		..\..\Publishing\version.json = ..\..\Publishing\version.json
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
