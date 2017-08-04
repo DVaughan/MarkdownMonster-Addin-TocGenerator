@@ -1,10 +1,10 @@
 {
-	"id": "org.danielvaughan.tocgeneratoraddin",
+	"id": "TocAddin",
 	"name": "TOC Generator",
 	"summary": "Generate a table of contents using the headings in your markdown file.",
 	"description": "This addin generates a table of contents from the headings in your markdown file. The table of contents is placed at the location of the cursor.",
 	"version": "1.0",
 	"minVersion": "1.4.5",
-	"author": "© Daniel Vaughan",
+	"author": "Â© Daniel Vaughan",
 	"updated": "2017-08-04T12:00:00Z"
 }

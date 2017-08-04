@@ -8,7 +8,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Publishing", "Publishing", "{6F2DE82F-1173-4ABE-90CC-8F6BCE54375B}"
 	ProjectSection(SolutionItems) = preProject
 		..\..\Publishing\CreateDistribution.ps1 = ..\..\Publishing\CreateDistribution.ps1
-		..\..\Publishing\version.json = ..\..\Publishing\version.json
 	EndProjectSection
 EndProject
 Global
