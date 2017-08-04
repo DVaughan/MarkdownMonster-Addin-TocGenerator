@@ -24,12 +24,8 @@ function ZipFiles($zipfilename, $sourcedir)
 }
 
 "Zipping up setup file..."
-#7z a -tzip  addin.zip ..\Distribution\*.*
-#$source = Join-Path "$($PSScriptRoot)" -ChildPath ".." | Join-Path -ChildPath "Distribution"
-# [io.path]::combine("$($PSScriptRoot)", "..\Distribution\");
+
 $source = (get-item "$PSScriptRoot").parent.FullName + "\Build\Distribution\*.*"
 $zipPath = (get-item "$PSScriptRoot").parent.FullName + "\Build\addin.zip"
-#ZipFiles $zipPath, $source
+
 Compress-Archive -Path $source -CompressionLevel Optimal -DestinationPath $zipPath
-echo $source
-echo $zipPath
