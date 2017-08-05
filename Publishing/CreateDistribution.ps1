@@ -10,8 +10,13 @@ md ..\Build\Distribution
 
 "Copying files..."
 copy $src\*.dll ..\Build\Distribution
-copy version.json ..\Build\Distribution
-copy version.json ..\Build\
+copy $src\version.json ..\Build\Distribution
+copy $src\license.txt ..\Build\Distribution
+
+copy $src\version.json ..\Build
+copy $src\icon.png ..\Build
+copy screenshot.png ..\Build
+copy $src\license.txt ..\Build
 
 "Zipping up setup file..."
 
