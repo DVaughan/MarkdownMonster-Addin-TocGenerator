@@ -1,4 +1,4 @@
-{
+﻿{
 	"id": "TocAddin",
 	"name": "TOC Generator",
 	"summary": "Generate a table of contents using the headings in your markdown file.",
