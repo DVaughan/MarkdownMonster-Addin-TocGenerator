@@ -162,7 +162,7 @@ namespace TocAddin
 					if (trimmed.StartsWith(prefix))
 					{
 						string text = trimmed.Substring(i + 2);
-						string anchorId = "#" + text.Replace(" ", "-").ToLower();
+						string anchorId = "#" + text.Replace(" ", "-").Replace("'", "").ToLower();
 
 						if (firstDepth == -1)
 						{
