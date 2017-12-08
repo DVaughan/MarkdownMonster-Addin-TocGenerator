@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Markdig">
+      <HintPath>..\..\..\..\..\..\Users\Daniel\AppData\Local\Markdown Monster\Markdig.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>$(LocalAppData)\Markdown Monster\NewtonSoft.Json.dll</HintPath>
       <Private>False</Private>

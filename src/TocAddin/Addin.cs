@@ -162,7 +162,8 @@ namespace TocAddin
 					if (trimmed.StartsWith(prefix))
 					{
 						string text = trimmed.Substring(i + 2);
-						string anchorId = "#" + text.Replace(" ", "-").Replace("'", "").ToLower();
+
+						string anchorId = "#" + Markdig.Helpers.LinkHelper.Urilize(text, false);
 
 						if (firstDepth == -1)
 						{
