@@ -93,7 +93,7 @@ namespace TocAddin
 			int caretLineNumber = editor.GetLineNumber();
 
 			var markdown = GetMarkdown();
-			string[] lines = markdown.Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
+			string[] lines = markdown.Split(new string[] { /*Environment.NewLine*/"\n" }, StringSplitOptions.None);
 
 			int maxDepth = TocAddinConfiguration.Current.MaxDepth;
 
