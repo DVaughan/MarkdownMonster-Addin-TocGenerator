@@ -3,8 +3,8 @@
 	"name": "TOC Generator",
 	"summary": "Generate a table of contents using the headings in your markdown file.",
 	"description": "This addin generates a table of contents from the headings in your markdown file. The table of contents is placed at the location of the cursor.",
-	"version": "1.3",
-	"minVersion": "1.4.5",
+	"version": "1.4",
+	"minVersion": "1.12",
 	"author": "© Daniel Vaughan http://danielvaughan.org",
-	"updated": "2018-03-16T12:00:00Z"
+	"updated": "2018-06-26T12:00:00Z"
 }
